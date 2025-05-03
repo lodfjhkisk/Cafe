@@ -2,9 +2,8 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>فرم ثبت نام</title>
-    <!-- Add Vazir Font -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
     <style>
         body {
@@ -12,49 +11,79 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1rem;
         }
         
         .form-container {
             background-color: white;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         label {
             display: block;
             margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
         }
 
         input {
             width: 100%;
-            padding: 0.3rem;
+            padding: 0.8rem;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 8px;
             font-family: 'Vazir', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2e7d32;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #2e7d32;
             color: white;
-            padding: 0.8rem;
+            padding: 1rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
             width: 100%;
             font-family: 'Vazir', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 1.5rem;
+                width: 95%;
+            }
+            
+            input, button {
+                padding: 0.7rem;
+            }
         }
     </style>
 </head>
@@ -82,4 +111,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
